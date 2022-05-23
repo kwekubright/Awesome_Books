@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Awesome Books List</title>
   </head>
   <body>
     <section id="books-list">
+      <h1>Books List</h1>
       <div class="section-wrapper" id="books-container"></div>
     </section>
 
     <section id="add-book">
+      <h3>Add new book</h3>
       <div class="section-wrapper">
         <div class="add-book-form">
           <form id="add-book-form" action="#">
-            <legend>
               <input
                 type="text"
                 class="book-title-input"
@@ -24,9 +25,7 @@
                 required
                 maxlength="250"
               />
-            </legend>
             <br />
-            <legend>
               <input
                 type="text"
                 class="book-author-input"
@@ -35,7 +34,6 @@
                 required
                 maxlength="60"
               />
-            </legend>
             <br />
             <button id="add-button" type="submit">Add book</button>
           </form>

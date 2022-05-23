@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<section id="books-list">
+  <div class="section-wrapper">
+    <div class="book">
+      <h3 class="title">Title</h3>
+      <p class="author">Author</p>
+      <button>Remove</button>
+    </div>
+    <hr>
+  </div>
+</section>
+
+<section id="add-book">
+  <div class="section-wrapper">
+    <div class="add-book-form">
+      <form id="add-book-form" action="#">
+        <legend>
+          <input type="text" class="book-title-input" id="book-title-input" placeholder="Enter the book's title" required maxlength="250"/>
+        </legend>
+        <br>
+        <legend>
+          <input type="text" class="book-author-input" id="book-author-input" placeholder="Enter author name" required maxlength="60"/>
+        </legend>
+        <br>
+        <button id="add-button" type="submit">Add book</button>
+      </form>
+    </div>
+  </div>
+</section>
+<script src="./js/books.js"></script>
+</body>
+</html>

@@ -30,6 +30,7 @@ if (!hasBooks) {
 function addBook(title, author) {
   books.push(new BookSkeleton(title, author));
   localStorage.setItem("books", JSON.stringify(books));
+  displayBooks();
 }
 
 // Lets define our remove book function
@@ -41,8 +42,9 @@ function removeBook(key) {
   // lets update the storage
   localStorage.setItem("books", JSON.stringify(books));
   // lets update the page
-  const id = 'book-' + key;
+  const id = "book-" + key;
   document.getElementById(id).remove();
+  displayBooks();
 }
 
 function displayBooks() {

@@ -34,25 +34,30 @@ function addBook(title, author) {
 
 // Lets define our remove book function
 function removeBook(key) {
-  // books.splice(key)
+  // lets remove the book
   console.log(books);
-  delete books[key];
+  books.splice(key, 1);
+  console.log(books);
+  // lets update the storage
   localStorage.setItem("books", JSON.stringify(books));
-  console.log(books);
+  // lets update the page
+  const id = 'book-' + key;
+  document.getElementById(id).remove();
 }
 
 function displayBooks() {
   let bookHtml = "";
   for (let i = 0; i < books.length; i++) {
-    bookHtml += `    
-    <div class="book">
-      <h3 class="title">${books[i].title} </h3>
-      <p class="author">${books[i].author} </p>
-      <button>Remove</button>
-    </div>
-    <hr>`;
+    bookHtml += ` 
+    <div id="book-${i}">   
+      <div class="book">
+        <h3 class="title">${books[i].title} </h3>
+        <p class="author">${books[i].author} </p>
+        <button onclick="removeBook(${i})">Remove</button>
+      </div>
+      <hr>
+    </div>`;
   }
-
   document.querySelector("#books-container").innerHTML = bookHtml;
 }
 

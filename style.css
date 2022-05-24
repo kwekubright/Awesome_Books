@@ -75,10 +75,44 @@
   padding: 0.5rem;
 }
 
+.book-author-input {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
 
 .flex-column {
   flex-direction: column;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+#add-book .flex-column {
+  gap: 1rem;
+}
+
+.add-book-form {
+  width: 35%;
+}
+
+.form-btn {
+  justify-content: flex-end;
+}
+
+hr {
+  margin-top: 2rem;
+  width: 47%;
+}
+
+#add-book .book-header {
+  padding: 2px;
 }

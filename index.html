@@ -23,12 +23,17 @@
           <button class="btn">Remove</button>
         </div>
       </div>
+      
     </section>
 
-    <section id="add-book">
-      <h3 class="book-header">Add new book</h3>
+    <section id="add-book" class="flex">
+      
       <div class="add-book-form flex flex-column">
-        <form id="add-book-form " action="#" class="flex flex-column">
+        <div class="section-title flex flex-column flex-justify-center flex-align-center">
+          <hr>
+            <h3 class="book-header">Add new book</h3>
+        </div>
+        <form id="add-book-form" action="#" class="flex flex-column">
           <input
             type="text"
             class="book-title-input"
@@ -37,8 +42,6 @@
             required
             maxlength="250"
           />
-          <br />
-          <br />
           <input
             type="text"
             class="book-author-input"
@@ -47,9 +50,9 @@
             required
             maxlength="60"
           />
-          <br />
-          <br />
-          <button id="add-button" type="submit">Add book</button>
+          <div class="flex form-btn">
+            <button id="add-button" class="btn" type="submit">Add book</button>
+          </div>
         </form>
       </div>
     </section>

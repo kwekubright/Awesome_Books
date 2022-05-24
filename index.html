@@ -4,42 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Awesome Books List</title>
   </head>
   <body>
     <section id="books-list">
-      <h1>Books List</h1>
+      <h1 class="book-header">Bright Library</h1>
       <div class="section-wrapper" id="books-container"></div>
+    </section>
+    <section class="main-container">
+      <div class="title-section">
+        <div class="blue-container">
+          <p class="title-descr">"Title" by Author</p>
+          <button class="btn">Remove</button>
+        </div>
+        <div class="white-container">
+          <p class="title-descr">"Title" by Author</p>
+          <button class="btn">Remove</button>
+        </div>
+      </div>
     </section>
 
     <section id="add-book">
-      <h3>Add new book</h3>
-      <div class="section-wrapper">
-        <div class="add-book-form">
-          <form id="add-book-form" action="#">
-              <input
-                type="text"
-                class="book-title-input"
-                id="book-title-input"
-                placeholder="Enter the book's title"
-                required
-                maxlength="250"
-              />
-            <br>
-            <br>
-              <input
-                type="text"
-                class="book-author-input"
-                id="book-author-input"
-                placeholder="Enter author name"
-                required
-                maxlength="60"
-              />
-            <br>
-            <br>
-            <button id="add-button" type="submit">Add book</button>
-          </form>
-        </div>
+      <h3 class="book-header">Add new book</h3>
+      <div class="add-book-form flex flex-column">
+        <form id="add-book-form " action="#" class="flex flex-column">
+          <input
+            type="text"
+            class="book-title-input"
+            id="book-title-input"
+            placeholder="Enter the book's title"
+            required
+            maxlength="250"
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            class="book-author-input"
+            id="book-author-input"
+            placeholder="Enter author name"
+            required
+            maxlength="60"
+          />
+          <br />
+          <br />
+          <button id="add-button" type="submit">Add book</button>
+        </form>
       </div>
     </section>
     <script src="./js/books.class.js"></script>

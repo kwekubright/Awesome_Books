@@ -68,7 +68,6 @@ function removeBook(key) {
 }
 
 /* eslint-enable */
-
 // Lets get the add book button
 const addButton = document.querySelector('#add-button');
 // Lets add a click event listener with which we will perform the add logic for the new book

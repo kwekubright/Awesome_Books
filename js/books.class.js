@@ -6,6 +6,7 @@ function BookSkeleton(title, author) {
 
 class BookClass {
   hasBooks = localStorage.getItem('books');
+
   books = [
     {
       title: 'Book 1',
@@ -27,6 +28,10 @@ class BookClass {
       title: 'Book 5',
       author: 'Author 5',
     },
+    {
+      title: 'Book 6',
+      author: 'Author 6',
+    },
   ];
 
   constructor() {
@@ -43,17 +48,17 @@ class BookClass {
   displayBooks() {
     let bookHtml = '';
     for (let i = 0; i < this.books.length; i += 1) {
-      bookHtml += ` 
-    <div id='book-${i}'>   
-      <div class='book'>
-        <h3 class='title'>${this.books[i].title} </h3>
-        <p class='author'>${this.books[i].author} </p>
-        <button onclick='removeBook(${i})'>Remove</button>
-      </div>
-      <hr>
-    </div>`;
+      bookHtml += `<div class="${
+        i % 2 === 0 ? 'blue-container' : 'white-container'
+      }" id="book-${i}">
+          <p class="title-descr">${this.books[i].title} by ${
+  this.books[i].author
+}</p>
+          <button class="btn" onclick='removeBook(${i})'>Remove</button>
+        </div>`;
     }
-    document.querySelector('#books-container').innerHTML = bookHtml;
+
+    document.querySelector('#books').innerHTML = bookHtml;
   }
 
   // Lets define our add book function
@@ -90,20 +95,21 @@ addButton.addEventListener('click', (e) => {
   // now lets get the new author
   const newAuthor = document.querySelector('#book-author-input').value;
   // lets add it to the books object at this point
-  let book = new BookClass();
+  const book = new BookClass();
   book.addBook(newTitle, newAuthor);
   // okay great. Lets reset the form now
   form.reset();
 });
 
+/* eslint-disable */
 function removeBook(key) {
-  book = new BookClass();
+  const book = new BookClass();
   book.removeBook(key);
 }
-
+/* eslint-enable */
 
 // load the form fields from local storage
 window.onload = () => {
-  books_ = new BookClass();
-  books_.displayBooks();
+  const books = new BookClass();
+  books.displayBooks();
 };

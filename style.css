@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,500;1,600;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,500;1,600;1,800;1,900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Headline Section */
@@ -26,7 +26,7 @@
 .title-section {
   display: flex;
   flex-direction: column;
-  flex-basis: 70%;
+  width: 70%;
   border: 2px solid black;
 }
 
@@ -147,6 +147,19 @@ nav ul {
   margin-top: 0px;
 }
 
+.list-items li a:hover {
+  color: blue;
+}
+
+.list-items li a:active {
+  color: blue;
+}
+
+.list-items li a {
+  text-decoration: none;
+  color: black;
+}
+
 .footer-wrapper {
   width: 70vw;
   margin-top: 3rem;
@@ -158,4 +171,17 @@ nav ul {
 
 .footer-wrapper p {
   font-size: 14px;
+}
+
+/* Contact-section */
+.contact-section {
+  margin-top: 3rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: flex !important;
 }

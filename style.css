@@ -118,6 +118,7 @@ hr {
 
 #add-book .book-header {
   padding: 2px;
+  margin-top: 1.25rem;
 }
 
 .nav-wrapper {
@@ -184,10 +185,6 @@ nav ul {
 
 .show {
   display: flex !important;
-}
-
-.book-header {
-  margin-top: 1.25rem;
 }
 
 .flex-end {

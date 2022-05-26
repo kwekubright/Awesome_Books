@@ -185,3 +185,7 @@ nav ul {
 .show {
   display: flex !important;
 }
+
+.book-header {
+  margin-top: 1.25rem;
+}

@@ -189,3 +189,12 @@ nav ul {
 .book-header {
   margin-top: 1.25rem;
 }
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.set-date {
+  width: 70%;
+  padding-top: 0.8rem;
+}

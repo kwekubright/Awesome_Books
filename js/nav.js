@@ -2,6 +2,7 @@
 const listElement = document.getElementById('list-menu');
 const addElement = document.getElementById('add-menu');
 const contactElement = document.getElementById('contact-menu');
+<<<<<<< HEAD
 
 // Let's get the sections elements
 const listSection = document.getElementById('lists');
@@ -9,6 +10,8 @@ const addSection = document.getElementById('add-book');
 const contactSection = document.getElementById('contact-section');
 
 // Function to show a section and hide other sections.
+=======
+>>>>>>> 42bae17 (Fix naviagtion)
 function showSection(e, sectionId) {
   e.preventDefault();
   const target = document.getElementById(sectionId);
@@ -53,6 +56,7 @@ listElement.addEventListener('click', (e) => {
 addElement.addEventListener('click', (e) => {
   showSection(e, 'add-book');
 });
+<<<<<<< HEAD
 
 // Event listener for contact menu
 contactElement.addEventListener('click', (e) => {
@@ -100,3 +104,8 @@ function setDate() {
 
 // Loads the date function
 setDate();
+=======
+contactElement.addEventListener('click', (e) => { 
+  showSection(e, 'contact-section')
+});
+>>>>>>> 42bae17 (Fix naviagtion)

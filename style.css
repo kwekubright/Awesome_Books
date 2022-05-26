@@ -129,6 +129,10 @@ hr {
   border: 2px solid black;
 }
 
+.contact-wrapper {
+  width: 70vw;
+}
+
 nav ul {
   list-style: none;
   gap: 25px;
@@ -177,6 +181,8 @@ nav ul {
 /* Contact-section */
 .contact-section {
   margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .hide {

@@ -144,7 +144,12 @@ nav ul {
   background: #828282;
   position: absolute;
   margin-left: 11px;
-  margin-top: 0px;
+  margin-top: 0;
+}
+
+.list-items li a {
+  text-decoration: none;
+  color: black;
 }
 
 .list-items li a:hover {
@@ -153,11 +158,6 @@ nav ul {
 
 .list-items li a:active {
   color: blue;
-}
-
-.list-items li a {
-  text-decoration: none;
-  color: black;
 }
 
 .footer-wrapper {

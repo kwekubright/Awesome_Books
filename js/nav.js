@@ -1,44 +1,60 @@
+// Let's get the menu elements
 const listElement = document.getElementById('list-menu');
 const addElement = document.getElementById('add-menu');
 const contactElement = document.getElementById('contact-menu');
 
+// Let's get the sections elements
+const listSection = document.getElementById('lists');
+const addSection = document.getElementById('add-book');
+const contactSection = document.getElementById('contact-section');
+
+// Function to show a section and hide the other sections
 function showSection(e, sectionId) {
   e.preventDefault();
   const target = document.getElementById(sectionId);
   const targetClasses = target.classList;
+  targetClasses.add('show');
 
-  // check if element has show classs
-  if (!targetClasses.contains('show'))
-  {
-    targetClasses.add('show');
-  }
-
-  // hide all other section
-
-  // targetClasses.toggle('show');
-  // targetClasses.toggle("hide");
-  const activeSection = document.getElementsByClassName("show");
-
-
-  for (let i = 0; i < activeSection.length; i = i + 1) {
-    const v = activeSection[i].classList;
-    if (!v.contains('hide')) {
-      const classes = activeSection[i].classList;
-      classes.remove("show");
-      classes.add("hide");
-    }
-
+  switch (sectionId) {
+    case 'lists':
+      // Show lists section and hide the others
+      listSection.classList.remove('hide');
+      addSection.classList.add('hide');
+      addSection.classList.remove('show');
+      contactSection.classList.add('hide');
+      contactSection.classList.remove('show');
+      break;
+    case 'add-book':
+      // Show add book section and hide the others
+      addSection.classList.remove('hide');
+      listSection.classList.add('hide');
+      listSection.classList.remove('show');
+      contactSection.classList.add('hide');
+      contactSection.classList.remove('show');
+      break;
+    case 'contact-section':
+      // Show contact section and hide the others
+      contactSection.classList.remove('hide');
+      listSection.classList.add('hide');
+      listSection.classList.remove('show');
+      addSection.classList.add('hide');
+      addSection.classList.remove('show');
+      break;
+    default:
   }
 }
 
-
-
+// Event listener for list menu
 listElement.addEventListener('click', (e) => {
-  showSection(e,'lists');
+  showSection(e, 'lists');
 });
-addElement.addEventListener('click', (e) => { 
+
+// Event listener for add new menu
+addElement.addEventListener('click', (e) => {
   showSection(e, 'add-book');
 });
-contactElement.addEventListener('click', (e) => { 
-  showSection(e, 'contact-section')
+
+// Event listener for contact menu
+contactElement.addEventListener('click', (e) => {
+  showSection(e, 'contact-section');
 });

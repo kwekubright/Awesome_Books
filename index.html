@@ -7,22 +7,47 @@
     <link rel="stylesheet" href="style.css" />
     <title>Awesome Books List</title>
   </head>
+
   <body>
-    <section id="books-list">
-      <h1 class="book-header">Bright Library</h1>
-      <div class="section-wrapper" id="books-container"></div>
+    <header class="flex flex-justify-center">
+      <nav class="flex flex-justify-center">
+        <div class="nav-wrapper flex">
+          <div class="logo flex">Bright Library</div>
+          <div class="menu-items">
+            <ul class="list-items flex">
+              <li class="show-split">
+                <a href="#" id="list-menu">List</a>
+              </li>
+              <li class="show-split">
+                <a href="#" id="add-menu">Add new</a>
+              </li>
+              <li>
+                <a href="#" id="contact-menu">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="date-section flex flex-justify-center">
+      <div class="set-date flex flex-justify-center flex-end">
+        <p id="current-date"></p>
+      </div>
     </section>
 
-    <section class="main-container">
+    <section id="lists" class="main-container flex-column show">
+      <div>
+        <h1 class="book-header">Bright Library</h1>
+      </div>
       <div class="title-section" id="books"></div>
     </section>
 
-    <section id="add-book" class="flex">
+    <section id="add-book" class="flex hide">
       <div class="add-book-form flex flex-column">
         <div
           class="section-title flex flex-column flex-justify-center flex-align-center"
         >
-          <hr />
           <h3 class="book-header">Add new book</h3>
         </div>
         <form id="add-book-form" action="#" class="flex flex-column">
@@ -48,6 +73,48 @@
         </form>
       </div>
     </section>
+
+    <section
+      id="contact-section"
+      class="contact-section flex flex-justify-center flex-column hide"
+    >
+      <div class="flex flex-justify-center flex-column contact-wrapper">
+        <div class="flex flex-justify-center flex-column flex-align-center">
+          <h1>Contact Information</h1>
+          <br />
+        </div>
+        <div class="flex flex-justify-center flex-column flex-align-center">
+          <br />
+          <p>
+            Do you have any questions or you just want to say "Hello" <br />
+            You can reach out to us through:
+          </p>
+          <br />
+          <ul>
+            <li>Our email: Brightlibrary@gmail.com</li>
+            <li>Our phone number: +2393239372</li>
+            <li>Our address: Britam Tower Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="flex flex-justify-center">
+      <div class="footer-wrapper flex">
+        <div class="copyright">
+          <p>Copyright © 2022 | Some Rights Reserved</p>
+        </div>
+        <div class="developer">
+          <p>
+            Developed By:
+            <a href="https://github.com/kwekubright" target="blank">Bright</a>
+            and
+            <a href="https://github.com/Graycemuthui" target="blank">Grace</a>
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="./js/books.class.js"></script>
+    <script src="./js/nav.js"></script>
   </body>
 </html>
